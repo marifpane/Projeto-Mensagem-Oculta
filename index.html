@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagem Oculta</title>
+    <script src="mensagemOculta.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="titulo"><h1>Mensagem Oculta</h1><header>
+    <p class="apresentacao">Para mandar uma mensagem oculta basta usar o decodificador abaixo, podendo optar pela "Cifra de Cesar" ou "Base 64".</p>
+
+    <div class="caixasTextos">
+        <textarea name="textoOriginal" id="textoOriginal" cols="30" rows="15" placeholder="Digite aqui sua mensagem!"></textarea>
+        <textarea disabled name="textoDecodificado" id="textoDecodificado" cols="30" rows="15"></textarea></br><br>
+    </div>
+
+    <div class="caixaDeSelecao">
+        <select name="tipoCodigo" class="tipoCodigo" id="tipoCodigo">
+            <option>Selecione a Codificação</option>
+            <option value= "cifraDeCesar" id="cifraDeCesar">Cifra de Cesar</option>
+            <option value= "base64" id= "base64">Base 64</option>
+        </select>
+    </div>
+
+    <div >
+        <input id="incremento" min ="0" max = "25" class=cifra type="number">
+    </div> 
+
+    <div class="opcao">
+        <input type="radio" name="check" id="codificar">Codificar
+        <input type="radio" name="check" id="decodificar">Decodificar
+    </div>
+    
+    <div class="button">
+        <input type="submit" id="botao" class="botao" value="codificar" onclick="agir()"></input>
+    </div>
+
+    
+
+    <footer>
+        © Desenvolvido por Mariana Pane - T13 Resilia
+    </footer>
+    
+</body>
+</html>
