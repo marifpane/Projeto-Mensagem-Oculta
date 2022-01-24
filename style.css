@@ -31,6 +31,15 @@
     margin-top: 2%;
 }
 
+.incremento{
+    width: 60%;
+    grid-column: span 2;
+}
+
+.invisivel{
+    display: none;
+}
+
 .botao{
     font-family: 'Poppins', sans-serif;
     font-weight: bold;

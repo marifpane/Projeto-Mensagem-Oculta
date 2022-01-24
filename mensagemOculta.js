@@ -18,6 +18,14 @@ decodifica.addEventListener ('click', function (){
     botao.value = "decodificar";
 })
 
+function abrir(){
+    if(tipoCodigo.value == "cifraDeCesar"){
+        incremento.classList.remove("invisivel");
+    } else{
+        incremento.classList.add("invisivel");
+    }
+}
+
 function agir(){
     
     

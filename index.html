@@ -19,7 +19,7 @@
     </div>
 
     <div class="caixaDeSelecao">
-        <select name="tipoCodigo" class="tipoCodigo" id="tipoCodigo">
+        <select name="tipoCodigo" class="tipoCodigo" id="tipoCodigo" onchange="abrir()">
             <option>Selecione a Codificação</option>
             <option value= "cifraDeCesar" id="cifraDeCesar">Cifra de Cesar</option>
             <option value= "base64" id= "base64">Base 64</option>
@@ -27,7 +27,7 @@
     </div>
 
     <div >
-        <input id="incremento" min ="0" max = "25" class=cifra type="number">
+        <input type="number" min="0" max="25" class="incremento invisivel" id="incremento" placeholder="Digite a chave">
     </div> 
 
     <div class="opcao">
