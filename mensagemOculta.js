@@ -1,13 +1,13 @@
 var tipoCodigo = document.querySelector('#tipoCodigo');
 var botao = document.getElementById ('botao');
-var tipoCodigo = document.querySelector('#tipoCodigo')
-var incremento = document.getElementById ('incremento')
-var cifraDeCesar = document.getElementById ('cifraDeCesar')
-var base64 = document.getElementById ('base64')
-var textoOriginal = document.getElementById ('textoOriginal')
-var textoDecodificado = document.getElementById ('textoDecodificado')
-var codifica = document.getElementById ('codificar')
-var decodifica = document.getElementById ('decodificar')
+var tipoCodigo = document.querySelector('#tipoCodigo');
+var incremento = document.getElementById ('incremento');
+var cifraDeCesar = document.getElementById ('cifraDeCesar');
+var base64 = document.getElementById ('base64');
+var textoOriginal = document.getElementById ('textoOriginal');
+var textoDecodificado = document.getElementById ('textoDecodificado');
+var codifica = document.getElementById ('codificar');
+var decodifica = document.getElementById ('decodificar');
 
 
 codifica.addEventListener('click', function (){
@@ -46,19 +46,19 @@ function agir(){
 }
 
 function base64Cod(){
-    textoDecodificado.textContent = btoa(textoOriginal.value)
+    textoDecodificado.textContent = btoa(textoOriginal.value);
 }
 
 function base64Decod(){
-    textoDecodificado.textContent = atob(textoOriginal.value)
+    textoDecodificado.textContent = atob(textoOriginal.value);
 }
 
 function cifraDeCesarC() {
     let inc = parseInt(incremento.value);
     let arr = textoOriginal.value.toLowerCase();
-    var arr_sp = arr.split('')
+    var arr_sp = arr.split('');
     var textoNovo=[];
-    var tabela=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+    var tabela=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
     
 
 
@@ -68,26 +68,26 @@ function cifraDeCesarC() {
             if(arr_sp[i]==tabela[l]){            
                 if(l+inc<tabela.length)
                 {
-                textoNovo.push(tabela[l+inc])
+                textoNovo.push(tabela[l+inc]);
                 }else{
-                    textoNovo.push(tabela[l+inc-tabela.length])
+                    textoNovo.push(tabela[l+inc-tabela.length]);
                 }
-             break
+             break;
             }else if(l==tabela.length-1){
-                textoNovo.push(arr_sp[i])
+                textoNovo.push(arr_sp[i]);
             }
         }
     }
-    textoDecodificado.textContent=textoNovo.join('')
+    textoDecodificado.textContent=textoNovo.join('');
 
 }
 
 function cifraDeCesarD() {
     let inc = parseInt(incremento.value);
     let arr = textoOriginal.value.toLowerCase();
-    var arr_sp = arr.split('')
+    var arr_sp = arr.split('');
     var textoNovo=[];
-    var tabela=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+    var tabela=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
     
 
 
@@ -97,38 +97,16 @@ function cifraDeCesarD() {
             if(arr_sp[i]==tabela[l]){            
                 if(l-inc<0)
                 {
-                    textoNovo.push(tabela[l-inc+tabela.length])
+                    textoNovo.push(tabela[l-inc+tabela.length]);
                 }else{
-                    textoNovo.push(tabela[l-inc])
+                    textoNovo.push(tabela[l-inc]);
                 }
-             break
+             break;
             }else if(l==tabela.length-1){
-                textoNovo.push(arr_sp[i])
+                textoNovo.push(arr_sp[i]);
             }
         }
     }
-    textoDecodificado.textContent=textoNovo.join('')
+    textoDecodificado.textContent=textoNovo.join('');
 
 }
-
-
-
-
-
-
-/*function codificar(){
-    var teste = textArea.value;
-    var b64 = btoa(teste);
-    resposta.textContent=b64;
-}
-
-function decodificar(){
-    var teste = textArea.value;
-    var base = atob(teste);
-    resposta.textContent=base;
-}
-
-function apagar(){
-    document.getElementById('digite').value = '';
-    document.getElementById('codificado').value = '';
-}*/
